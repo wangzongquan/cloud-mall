@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: dev #设置为开发环境，去config服务器寻找*-dev.yml文件
+  application:
+    name: mall-admin #服务名称，去config服务器寻找文件名为mall-admin-*.yml文件,配合设置的环境，寻找mall-admin-dev.yml文件
+  cloud:
+    config:
+      enabled: true
+      service-id: CONFIG #config配置服务器名称
+eureka:
+  instance:
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka/

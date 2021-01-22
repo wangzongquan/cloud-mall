@@ -1,0 +1,4 @@
+spring:
+  datasource:
+    url: http://aliyun.wangzongquan.com
+    username: root

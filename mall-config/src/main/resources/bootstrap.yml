@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config
+  profiles:
+    active: native
+
+eureka:
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${random.value}
+  client:
+    server-url:
+      defaultZone: http://localhost:8761/eureka/
