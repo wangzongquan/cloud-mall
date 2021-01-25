@@ -9,5 +9,5 @@ eureka:
     metadata-map:
       instanceId: ${spring.application.name}:${random.value} #服务ID
   client:
-    server-url:
+    service-url: #在EurekaClientConfigBean中有此属性
       defaultZone: http://localhost:8761/eureka/ #注册到服务中心

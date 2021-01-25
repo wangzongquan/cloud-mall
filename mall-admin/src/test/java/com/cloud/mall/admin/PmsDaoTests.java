@@ -1,6 +1,7 @@
 package com.cloud.mall.admin;
 
 import com.cloud.mall.admin.dao.PmsProductDao;
+import com.cloud.mall.admin.service.PmsProductService;
 import com.cloud.mall.model.PmsProduct;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,6 +17,10 @@ import java.util.List;
 public class PmsDaoTests {
     @Autowired
     private PmsProductDao pmsProductDao;
+
+    @Autowired
+    private PmsProductService pmsProductService;
+
     @Test
     @Transactional
     public void testPeople(){
@@ -23,5 +28,10 @@ public class PmsDaoTests {
         for(PmsProduct product:products){
             System.out.println(product);
         }
+    }
+
+    @Test
+    public void testService(){
+
     }
 }

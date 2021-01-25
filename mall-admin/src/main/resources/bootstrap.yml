@@ -7,8 +7,8 @@ spring:
     config:
       enabled: true
       service-id: CONFIG #config配置服务器名称
+      uri: "http://192.168.1.4:8888"
 eureka:
-  instance:
-    client:
-      service-url:
-        defaultZone: http://localhost:8761/eureka/
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.4:9000/eureka/
