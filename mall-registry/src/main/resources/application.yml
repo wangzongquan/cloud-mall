@@ -4,5 +4,5 @@ eureka:
   instance:
     hostname: localhost
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: false #为注册中心，不需要注册自己
+    fetch-registry: false #

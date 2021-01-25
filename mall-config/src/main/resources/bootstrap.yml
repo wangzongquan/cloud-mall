@@ -1,13 +1,13 @@
 spring:
   application:
-    name: config
+    name: config #服务名称
   profiles:
-    active: native
+    active: native #代表为配置文件放在本地，默认为git配置
 
 eureka:
   instance:
     metadata-map:
-      instanceId: ${spring.application.name}:${random.value}
+      instanceId: ${spring.application.name}:${random.value} #服务ID
   client:
     server-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/ #注册到服务中心

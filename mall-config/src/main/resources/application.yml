@@ -3,7 +3,7 @@ spring:
     config:
       server:
         native:
-          search-locations: classpath:/config
+          search-locations: classpath:/config #配置文件所在路径
 
 server:
   port: 8888

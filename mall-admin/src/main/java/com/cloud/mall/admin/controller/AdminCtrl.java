@@ -1,8 +1,7 @@
 package com.cloud.mall.admin.controller;
 
-import com.cloud.mall.admin.config.DataBaseConfiguration;
+import com.cloud.mall.admin.dao.PmsProductDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,11 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class AdminCtrl {
 
     @Autowired
-    private DataBaseConfiguration configuration;
+    private PmsProductDao pmsProductDao;
 
-    @RequestMapping("/getConfig")
-    public String getConfig(){
-        System.out.println(configuration.getUrl());
+    @RequestMapping("/products")
+    public String products(){
         return "success";
     }
 }
