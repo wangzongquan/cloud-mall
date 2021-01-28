@@ -143,10 +143,7 @@ public class PmsProduct implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", brandId=").append(category.getId());
-        sb.append(", productCategoryId=").append(category.getId());
         sb.append(", feightTemplateId=").append(feightTemplateId);
-        sb.append(", productAttributeCategoryId=").append(attributeCategory.getId());
         sb.append(", name=").append(name);
         sb.append(", pic=").append(pic);
         sb.append(", productSn=").append(productSn);

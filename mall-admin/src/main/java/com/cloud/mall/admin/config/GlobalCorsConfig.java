@@ -13,7 +13,7 @@ import org.springframework.web.util.pattern.PathPatternParser;
  * @Author wangzq
  * @since 2021-01-24
  */
-@Configuration
+//@Configuration
 public class GlobalCorsConfig {
 
     @Bean
