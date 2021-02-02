@@ -3,10 +3,9 @@ package com.cloud.mall.model;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
@@ -42,6 +41,11 @@ public class PmsProductCategory implements Serializable {
 
     @ApiModelProperty(value = "描述")
     private String description;
+
+    @ApiModelProperty(value = "子类别")
+    @OneToMany
+    @JoinColumn(name = "parentId",foreignKey = @ForeignKey(name = "none",value = ConstraintMode.NO_CONSTRAINT))
+    private List<PmsProductCategory> children;
 
     private static final long serialVersionUID = 1L;
 
